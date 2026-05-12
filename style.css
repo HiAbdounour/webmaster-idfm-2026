@@ -167,6 +167,18 @@ body {
 }
 
 /* ===================================
+   HIDE ITEMS
+   =================================== */
+   
+.hidden > .accordion-wrapper,
+.hidden > .accordion-wrapper > .accordion-item,
+.hidden > .accordion-wrapper > .accordion-item > .accordion-item-header,
+.hidden > .accordion-wrapper > .accordion-item > .accordion-item-header,
+.hidden > .accordion-wrapper > .accordion-item > .accordion-item-body{
+	display: none;
+}
+
+/* ===================================
    LOGO STYLES
    =================================== */
 
