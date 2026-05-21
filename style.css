@@ -15,6 +15,19 @@ body {
   line-height: 1.6;
 }
 
+.masterclass {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+#datex{
+	font-size:4em;
+	font-weight: 800;
+}
+
 /* ===================================
    CONTAINER & LAYOUT
    =================================== */
@@ -167,18 +180,6 @@ body {
 }
 
 /* ===================================
-   HIDE ITEMS
-   =================================== */
-   
-.hidden > .accordion-wrapper,
-.hidden > .accordion-wrapper > .accordion-item,
-.hidden > .accordion-wrapper > .accordion-item > .accordion-item-header,
-.hidden > .accordion-wrapper > .accordion-item > .accordion-item-header,
-.hidden > .accordion-wrapper > .accordion-item > .accordion-item-body{
-	display: none;
-}
-
-/* ===================================
    LOGO STYLES
    =================================== */
 
@@ -237,6 +238,42 @@ body {
   background-color: #a94e89; /* Purple/Magenta */
 }
 
+.accordion-logo-letter.letter-h {
+  background-color: #885e30; /* Brown */
+}
+
+.accordion-logo-letter.letter-j {
+  background-color: #c9c131; /* BoldYellow */
+  color: #333;
+}
+
+.accordion-logo-letter.letter-k {
+  background-color: #978f36; /* WhyBrown */
+}
+
+.accordion-logo-letter.letter-l {
+  background-color: #cba1c5; /* Lilas */
+  color: #333;
+}
+
+.accordion-logo-letter.letter-n {
+  background-color: #1ba787; /* GreenTurquoise */
+}
+
+.accordion-logo-letter.letter-p {
+  background-color: #f1894d; /* Orange */
+  color: #333;
+}
+
+.accordion-logo-letter.letter-r {
+  background-color: #f49cab; /* Pink */
+  color: #333;
+}
+
+.accordion-logo-letter.letter-u {
+  background-color: #af2d4a; /* Framboise */
+}
+
 @media (max-width: 768px) {
   .accordion-logo-text,
   .accordion-logo-letter {
@@ -252,6 +289,111 @@ body {
 
   .accordion-logo-letter {
     font-size: 16px;
+  }
+}
+
+/* ===========================
+   CIRCULAR LOGO STYLES
+   =========================== */
+
+.accordion-logo-text-circular {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+}
+
+/* Number Logo - Filled Circular */
+.accordion-logo-nb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #D946A6;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+
+/* Line 4 - Magenta/Purple */
+.m4 {
+  background-color: #D946A6;
+  color: #fff;
+}
+
+/* Line 5 - Orange */
+.m5 {
+  background-color: #FF8C42;
+  color: #000;
+}
+
+/* Line 7bis - Dark Green */
+.m7b {
+  background-color: #7fbe89;
+  color: #000;
+}
+
+/* Line 8 - Light Purple/Lavender */
+.m8 {
+  background-color: #D9B3E0;
+  color: #000;
+}
+
+/* Line 12 - Dark Green */
+.m12 {
+  background-color: #00A651;
+  color: #fff;
+}
+
+/* Line 13 - Light Blue/Cyan */
+.m13 {
+  background-color: #92CDD3;
+  color: #000;
+}
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+   =========================== */
+
+@media (max-width: 768px) {
+  .accordion-logo-text-circular {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .accordion-logo-nb {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-logo-text-circular {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  .accordion-logo-nb {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
   }
 }
 
@@ -457,5 +599,152 @@ body {
 
   .accordion-logo-text {
     background-color: #374151;
+  }
+}
+
+/* ===========================
+   TRAM LOGO STYLES
+   =========================== */
+
+.accordion-logo-container-tram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tram Icon */
+.accordion-logo-tram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Tram body - main rectangle */
+.accordion-logo-tram::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  border: 2px solid #333;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+/* Tram pole/cable on top */
+.accordion-logo-tram::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background-color: #333;
+  top: 2px;
+  border-radius: 1px;
+}
+
+/* Tram wheels (using box-shadow for two circles) */
+.accordion-logo-tram {
+  box-shadow: inset -7px 12px 0 -6px #333, inset 7px 12px 0 -6px #333;
+}
+
+/* Tram Line Number Badge */
+.accordion-logo-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0066CC;
+  border: none;
+  border-top: 4px solid #0066CC;
+  border-bottom: 4px solid #0066CC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   TRAM LINE COLOR VARIANTS
+   =========================== */
+
+.accordion-logo-bar.t1 {
+  background-color: #0066CC;
+  border-top-color: #0066CC;
+  border-bottom-color: #0066CC;
+}
+
+.accordion-logo-bar.t2 {
+  background-color: #B9498D;
+  border-top-color: #B9498D;
+  border-bottom-color: #B9498D;
+}
+
+.accordion-logo-bar.c1 {
+  background-color: #97ced1;
+  border-top-color: #97ced1;
+  border-bottom-color: #97ced1;
+}
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+   =========================== */
+
+@media (max-width: 768px) {
+  .accordion-logo-tram {
+    width: 36px;
+    height: 36px;
+  }
+
+  .accordion-logo-tram::before {
+    width: 18px;
+    height: 12px;
+    border-width: 1.5px;
+  }
+
+  .accordion-logo-tram::after {
+    width: 2.5px;
+    height: 9px;
+  }
+
+  .accordion-logo-bar {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-logo-tram {
+    width: 32px;
+    height: 32px;
+  }
+
+  .accordion-logo-tram::before {
+    width: 16px;
+    height: 11px;
+    border-width: 1px;
+  }
+
+  .accordion-logo-tram::after {
+    width: 2px;
+    height: 8px;
+  }
+
+  .accordion-logo-bar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
   }
 }
