@@ -133,6 +133,10 @@ body {
   box-shadow: 0 4px 16px rgba(74, 125, 216, 0.2);
 }
 
+.accordion-item.hidden {
+  display: none;
+}
+
 /* ===================================
    ACCORDION ITEM HEADER (TOGGLE)
    =================================== */
