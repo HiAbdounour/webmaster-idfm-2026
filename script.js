@@ -26,8 +26,8 @@ function filterAccordionsByDate(){
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
     
-    if (startDate.getTime() === tomorrow.getTime()) {
-      const warningMsg = `Attention ! Demain, il y a des travaux sur le ${item.querySelector('.accordion-item-title')?.textContent || '???'}`;
+    if (startDate.getDate() === tomorrow.getDate()) {
+      const warningMsg = `🚧 Attention ! Demain, il y a des travaux sur le ${item.querySelector('.accordion-item-title')?.textContent || '???'}`;
       const pp = document.createElement('p');
 	  pp.textContent = warningMsg;
 	  document.getElementById("tomorrow-too").appendChild(pp);
