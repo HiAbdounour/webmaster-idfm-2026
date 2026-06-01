@@ -12,7 +12,10 @@ function filterAccordionsByDate(){
   document.querySelectorAll('[data-start][data-end]').forEach(item => {
     const startDate = new Date(item.dataset.start);
     const endDate = new Date(item.dataset.end);
-    
+    startDate.setHours(0,0,0,0);
+	endDate.setHours(0,0,0,0);
+	
+	
     // Check if today falls within the period
     const isActive = today >= startDate && today <= endDate;
     
