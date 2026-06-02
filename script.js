@@ -29,7 +29,7 @@ function filterAccordionsByDate(){
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
     
-    if (startDate.getDate() === tomorrow.getDate()) {
+    if (startDate === tomorrow) {
       const warningMsg = `🚧 Attention ! Demain, il y a des travaux sur le ${item.querySelector('.accordion-item-title')?.textContent || '???'}`;
       const pp = document.createElement('p');
 	  pp.textContent = warningMsg;
